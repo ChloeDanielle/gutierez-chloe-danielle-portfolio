@@ -1,2 +1,2 @@
-# gutierez-chloe-danielle-portfolio
+# PORTFOLIO
 Gutierrez, Chloe Danielle's Personal Portfolio
