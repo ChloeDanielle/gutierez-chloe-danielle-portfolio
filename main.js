@@ -64,13 +64,21 @@ function updateActiveNavLink() {
 
 // Nav link hover sound effect (optional visual feedback)
 navLinks.forEach(link => {
-    link.addEventListener('mouseenter', () => {
-        // Add a subtle animation class
+    link.addEventListener('mouseenter', (e) => {
         link.style.transform = 'translateY(-2px)';
     });
     
     link.addEventListener('mouseleave', () => {
         link.style.transform = 'translateY(0)';
+    });
+    
+    // Track mouse position for particle effect
+    link.addEventListener('mousemove', (e) => {
+        const rect = link.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        link.style.setProperty('--mouse-x', x + '%');
+        link.style.setProperty('--mouse-y', y + '%');
     });
 });
 
@@ -149,9 +157,9 @@ createParticles();
 const gameData = [
     {
         title: "Noli Me Tangere Game",
-        desc: "An interactive educational game that brings Jose Rizal's classic novel to life. Experience an immersive storytelling adventure that combines Philippine literature with engaging gameplay mechanics, making learning about Filipino heritage fun and memorable.",
-        platform: "PC / Mobile",
-        engine: "Unity C#",
+        desc: "A 3D interactive educational game that brings Jose Rizal's classic novel to life. Experience an immersive storytelling adventure that combines Philippine literature with engaging gameplay mechanics, making learning about Filipino heritage fun and memorable.",
+        platform: "PC",
+        engine: "Unity 3D",
         role: "Lead Programmer",
         year: 2024,
         objectives: [
@@ -208,9 +216,9 @@ const gameData = [
         ]
     },
     {
-        title: "Chozen Way!",
+        title: "Arise!",
         desc: "An intense hack and slash 2D platformer where every choice matters. Slash through enemies, navigate challenging platforms, discover hidden paths, and carve your own destiny in this action-packed adventure.",
-        platform: "PC / Mobile",
+        platform: "PC",
         engine: "Unity 2D",
         role: "Lead Programmer",
         year: 2024,
@@ -231,84 +239,88 @@ const gameData = [
 
 const uiData = [
     {
-        title: "UI Design Project",
-        desc: "A comprehensive UI/UX design prototype created in Figma. Features modern design principles, intuitive user flows, and a clean visual aesthetic optimized for user experience.",
+        title: "MDJ Catering Website",
+        desc: "A comprehensive catering service platform with dual interfaces. The customer side allows users to create accounts, browse menu options, and place food orders. The admin side provides a complete dashboard to track orders, manage inventory, and monitor business operations in real-time.",
         platform: "Web / Mobile",
         engine: "Figma",
         role: "UI/UX Designer",
         year: 2024,
         objectives: [
-            "Create intuitive user interface",
-            "Design responsive layouts",
-            "Build interactive prototypes",
-            "Implement design system"
+            "Design customer ordering interface",
+            "Create admin tracking dashboard",
+            "Build login/authentication system",
+            "Develop menu browsing experience"
         ],
         images: [
             "1screenshotUi1.png",
             "2screenshotUi1.png",
             "3screenshotUi1.png",
             "4screenshotUi1.png"
-        ]
+        ],
+        prototypeUrl: "https://www.figma.com/proto/jvd7le8VtMSxM5wu7Ndm2A/Untitled?node-id=0-1&t=sNzjSoLGCt1Vqu7H-1" // Replace with your actual link
     },
     {
-        title: "Web Project",
-        desc: "A static website built with clean HTML structure. Focuses on semantic markup, accessibility best practices, and foundational web development principles.",
+        title: "Noli Me Tangere Game Website",
+        desc: "Official website for the Noli Me Tangere educational game. Features comprehensive project objectives, an engaging game trailer, and a demo download section. The site serves as the main hub for players to learn about the game and experience a preview of the interactive storytelling adventure.",
         platform: "Web",
         engine: "HTML",
         role: "Web Developer",
         year: 2024,
         objectives: [
-            "Write semantic HTML structure",
-            "Ensure accessibility compliance",
-            "Optimize page performance",
-            "Create responsive markup"
+            "Showcase project objectives clearly",
+            "Embed and display game trailer",
+            "Provide demo download functionality",
+            "Create engaging landing experience"
         ],
         images: [
             "1screenshotUi2.png",
             "2screenshotUi2.png",
             "3screenshotUi2.png",
             "4screenshotUi2.png"
-        ]
+        ],
+        prototypeUrl: "https://chloedanielle.github.io/nolimetangeregamesite.io/" // Replace with your actual website link
     },
     {
-        title: "Interactive Web Application",
-        desc: "A full-featured interactive web application built with HTML, CSS, and JavaScript. Includes dynamic functionality, smooth animations, and a polished user interface.",
+        title: "DASH - De La Salle Lipa CarPool Service",
+        desc: "A student-focused carpooling web application designed for De La Salle Lipa students. DASH helps reduce traffic, provides comfortable trips, and improves campus connections. Features include driver ratings (1-5 stars), real-time messaging, ride booking, and a community-driven approach to sustainable transportation.",
         platform: "Web",
-        engine: "HTML/CSS/JavaScript",
-        role: "Full Stack Developer",
+        engine: "Figma",
+        role: "UI/UX Designer",
         year: 2024,
         objectives: [
-            "Build interactive features",
-            "Implement responsive design",
-            "Create smooth animations",
-            "Develop dynamic functionality"
+            "Design driver rating system (1-5 stars)",
+            "Create messaging interface",
+            "Build ride booking flow",
+            "Develop student verification system"
         ],
         images: [
             "1screenshotUi3.png",
             "2screenshotUi3.png",
             "3screenshotUi3.png",
             "4screenshotUi3.png"
-        ]
+        ],
+        prototypeUrl: "https://www.figma.com/proto/RfMtYOQQrCbAudJuD2dSKH/Dash-web?t=sNzjSoLGCt1Vqu7H-1" // Replace with your actual link
     },
     {
-        title: "UI/UX Design",
-        desc: "A polished UI/UX design prototype showcasing modern interface design. Created in Figma with attention to user experience, visual hierarchy, and brand consistency.",
-        platform: "Web / Mobile",
-        engine: "Figma",
-        role: "UI/UX Designer",
+        title: "PennyWise",
+        desc: "A comprehensive mobile wallet and expense tracking application built with Flutter. PennyWise helps users track expenses, set financial goals, monitor total spending, and manage multiple wallets (GCash, Maya, Cash). Features manual transaction entry for precise budget tracking and better financial management.",
+        platform: "Mobile (Android/iOS)",
+        engine: "Flutter",
+        role: "Mobile App Developer",
         year: 2024,
         objectives: [
-            "Design visual components",
-            "Create user flow diagrams",
-            "Build clickable prototypes",
-            "Establish style guidelines"
+            "Design expense tracking system",
+            "Create goals management feature",
+            "Build multiple wallet support",
+            "Implement manual transaction entry"
         ],
         images: [
             "1screenshotUi4.png",
             "2screenshotUi4.png",
             "3screenshotUi4.png",
             "4screenshotUi4.png"
-        ]
+        ],
+        prototypeUrl: null // No prototype available
     }
 ];
 
@@ -373,6 +385,17 @@ function openModal(type, index) {
         li.innerText = obj;
         modalObjectives.appendChild(li);
     });
+
+    // Handle prototype button for UI/UX projects
+    const prototypeContainer = document.getElementById('prototypeButtonContainer');
+    const prototypeLink = document.getElementById('prototypeLink');
+    
+    if (type === 'ui' && data.prototypeUrl) {
+        prototypeContainer.classList.remove('hidden');
+        prototypeLink.href = data.prototypeUrl;
+    } else {
+        prototypeContainer.classList.add('hidden');
+    }
 
     // Setup slides with fallback
     slides = data.images.map((img, i) => ({
@@ -672,3 +695,50 @@ function animateNumber(element, target) {
 }
 
 animateStats();
+
+// -----------------------------
+// Contact Modal Functions
+// -----------------------------
+const contactModal = document.getElementById('contactModal');
+const contactModalBackdrop = contactModal?.querySelector('.modal-backdrop');
+const contactModalBox = contactModal?.querySelector('.modal-box');
+
+function openContactModal() {
+    if (!contactModal) return;
+    
+    contactModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    
+    // Trigger animations
+    requestAnimationFrame(() => {
+        contactModalBackdrop?.classList.add('show');
+        contactModalBox?.classList.add('show');
+    });
+    
+    // Close mobile menu if open
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn?.classList.remove('active');
+    mobileMenu?.classList.remove('active');
+}
+
+function closeContactModal() {
+    if (!contactModal) return;
+    
+    // Animate out
+    contactModalBackdrop?.classList.remove('show');
+    contactModalBox?.classList.remove('show');
+    
+    // Hide after animation
+    setTimeout(() => {
+        contactModal.classList.add('hidden');
+        document.body.style.overflow = '';
+    }, 400);
+}
+
+// Close contact modal on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !contactModal?.classList.contains('hidden')) {
+        closeContactModal();
+    }
+});
