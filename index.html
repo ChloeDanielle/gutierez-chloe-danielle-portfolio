@@ -62,11 +62,11 @@
                 </a>
                 
                 <!-- Contact Button -->
-                <a href="gutierrezchloe1212@gmail.com" class="nav-cta ml-4">
+                <button onclick="openContactModal()" class="nav-cta ml-4">
                     <span class="nav-cta-bg"></span>
                     <span class="nav-cta-text"><i class="fas fa-envelope mr-2"></i>Contact</span>
                     <span class="nav-cta-shine"></span>
-                </a>
+                </button>
             </div>
             
             <!-- Mobile Menu Button -->
@@ -84,7 +84,7 @@
             <a href="#uiux" class="mobile-nav-link" data-section="uiux"><i class="fas fa-palette mr-3"></i>UI/UX</a>
             <a href="#education" class="mobile-nav-link" data-section="education"><i class="fas fa-graduation-cap mr-3"></i>Education</a>
             <a href="#about" class="mobile-nav-link" data-section="about"><i class="fas fa-user mr-3"></i>About</a>
-            <a href="gutierrezchloe1212@gmail.com" class="mobile-nav-cta"><i class="fas fa-envelope mr-3"></i>Contact Me</a>
+            <button onclick="openContactModal()" class="mobile-nav-cta"><i class="fas fa-envelope mr-3"></i>Contact Me</button>
         </div>
     </nav>
 
@@ -113,17 +113,17 @@
                     Unity 2D/3D Game Programmer & UI/UX Designer
                 </h2>
                 <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start pt-4">
-                    <a href="resume.pdf" download class="btn-cyber px-8 py-3 font-bold uppercase tracking-wider">
+                    <a href="GutierrezChloeResume.pdf" download class="btn-cyber px-8 py-3 font-bold uppercase tracking-wider">
                         <span class="btn-cyber-content"><i class="fas fa-download mr-2"></i> Download CV</span>
                         <span class="btn-cyber-glitch"></span>
                         <span class="btn-cyber-label">_CV</span>
                     </a>
                 </div>
                 <div class="flex gap-6 justify-center md:justify-start text-2xl pt-4">
-                    <a href="https://facebook.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-blue-500" title="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-pink-500" title="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-gray-400" title="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-blue-700" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/cholezy.01" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-blue-500" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/gchole1/#" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-pink-500" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/ChloeDanielle" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-gray-400" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/chloe-danielle-gutierrez" target="_blank" rel="noopener noreferrer" class="social-icon hover:text-blue-700" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
             
@@ -154,6 +154,7 @@
                     <!-- Main Photo -->
                     <div class="photo-wrapper">
                         <img src="ME.png"
+                             onerror="this.src='https://api.dicebear.com/9.x/avataaars/svg?seed=Chloe&backgroundColor=b6e3f4'"
                              alt="Chloe Danielle Gutierrez"
                              class="profile-photo">
                         <div class="photo-overlay"></div>
@@ -204,7 +205,7 @@
                             <img src="Game1.png" onerror="this.src='https://placehold.co/400x400/1a1a2e/00f3ff?text=Noli+Me+Tangere'" class="game-card-img">
                             <div class="game-card-overlay"></div>
                             <div class="game-card-content">
-                                <span class="game-card-badge">Unity C#</span>
+                                <span class="game-card-badge">Unity 3D</span>
                                 <h3 class="game-card-title">Noli Me Tangere</h3>
                                 <p class="game-card-subtitle">Educational Game</p>
                             </div>
@@ -259,7 +260,7 @@
                             <div class="game-card-overlay purple"></div>
                             <div class="game-card-content">
                                 <span class="game-card-badge purple">Unity 2D</span>
-                                <h3 class="game-card-title">Chozen Way!</h3>
+                                <h3 class="game-card-title">Arise!</h3>
                                 <p class="game-card-subtitle">Hack & Slash Platformer</p>
                             </div>
                             <div class="game-card-shine"></div>
@@ -294,10 +295,10 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- UI Card 1 -->
+                <!-- UI Card 1 - MDJ Catering -->
                 <div class="ui-card-new group" onclick="openModal('ui', 0)">
                     <div class="ui-card-image-wrapper">
-                        <img src="Ui1.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/bc13fe?text=UI+Design+1'" class="ui-card-image">
+                        <img src="Ui1.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/bc13fe?text=MDJ+Catering'" class="ui-card-image">
                         <div class="ui-card-overlay">
                             <span class="ui-view-btn"><i class="fas fa-eye mr-2"></i>View Project</span>
                         </div>
@@ -307,16 +308,16 @@
                             <i class="fab fa-figma"></i>
                             <span>Figma</span>
                         </div>
-                        <h4 class="ui-card-title">UI Design Project</h4>
-                        <p class="ui-card-desc">Prototype Design</p>
+                        <h4 class="ui-card-title">MDJ Catering Website</h4>
+                        <p class="ui-card-desc">Customer & Admin Portal</p>
                     </div>
                     <div class="ui-card-border"></div>
                 </div>
 
-                <!-- UI Card 2 -->
+                <!-- UI Card 2 - Noli Me Tangere Website -->
                 <div class="ui-card-new group" onclick="openModal('ui', 1)">
                     <div class="ui-card-image-wrapper">
-                        <img src="Ui2.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/00f3ff?text=Web+Project+2'" class="ui-card-image">
+                        <img src="Ui2.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/00f3ff?text=Noli+Me+Tangere'" class="ui-card-image">
                         <div class="ui-card-overlay cyan">
                             <span class="ui-view-btn"><i class="fas fa-eye mr-2"></i>View Project</span>
                         </div>
@@ -326,46 +327,46 @@
                             <i class="fab fa-html5"></i>
                             <span>HTML</span>
                         </div>
-                        <h4 class="ui-card-title">Web Project</h4>
-                        <p class="ui-card-desc">Static Website</p>
+                        <h4 class="ui-card-title">Noli Me Tangere Game Website</h4>
+                        <p class="ui-card-desc">Game Showcase & Download</p>
                     </div>
                     <div class="ui-card-border cyan"></div>
                 </div>
 
-                <!-- UI Card 3 -->
+                <!-- UI Card 3 - DASH Carpool -->
                 <div class="ui-card-new group" onclick="openModal('ui', 2)">
                     <div class="ui-card-image-wrapper">
-                        <img src="Ui3.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/bc13fe?text=Web+App+3'" class="ui-card-image">
+                        <img src="Ui3.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/bc13fe?text=DASH+Carpool'" class="ui-card-image">
                         <div class="ui-card-overlay">
                             <span class="ui-view-btn"><i class="fas fa-eye mr-2"></i>View Project</span>
                         </div>
                     </div>
                     <div class="ui-card-info">
                         <div class="ui-card-tech">
-                            <i class="fab fa-js-square"></i>
-                            <span>HTML/CSS/JS</span>
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
                         </div>
-                        <h4 class="ui-card-title">Interactive Web App</h4>
-                        <p class="ui-card-desc">Full Stack Project</p>
+                        <h4 class="ui-card-title">DASH - CarPool Service</h4>
+                        <p class="ui-card-desc">Student Rideshare App</p>
                     </div>
                     <div class="ui-card-border"></div>
                 </div>
 
-                <!-- UI Card 4 -->
+                <!-- UI Card 4 - PennyWise -->
                 <div class="ui-card-new group" onclick="openModal('ui', 3)">
                     <div class="ui-card-image-wrapper">
-                        <img src="Ui4.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/00f3ff?text=UI+Design+4'" class="ui-card-image">
+                        <img src="Ui4.png" onerror="this.src='https://placehold.co/600x800/2a2a2a/00f3ff?text=PennyWise'" class="ui-card-image">
                         <div class="ui-card-overlay cyan">
                             <span class="ui-view-btn"><i class="fas fa-eye mr-2"></i>View Project</span>
                         </div>
                     </div>
                     <div class="ui-card-info">
                         <div class="ui-card-tech cyan">
-                            <i class="fab fa-figma"></i>
-                            <span>Figma</span>
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Flutter</span>
                         </div>
-                        <h4 class="ui-card-title">UI/UX Design</h4>
-                        <p class="ui-card-desc">Prototype Design</p>
+                        <h4 class="ui-card-title">PennyWise</h4>
+                        <p class="ui-card-desc">Expense Tracker & Wallet</p>
                     </div>
                     <div class="ui-card-border cyan"></div>
                 </div>
@@ -457,8 +458,8 @@
                                 <p class="edu-degree">Accountancy, Business and Management Strand</p>
                                 <p class="edu-major"><i class="fas fa-chart-line mr-2"></i>ABM Track</p>
                                 <div class="edu-tags">
-                                    <span class="edu-tag purple">Accounting</span>
                                     <span class="edu-tag purple">Business</span>
+                                    <span class="edu-tag purple">Accounting</span>
                                     <span class="edu-tag purple">Management</span>
                                 </div>
                             </div>
@@ -546,7 +547,7 @@
                         <!-- Main Image -->
                         <div class="about-image-wrapper">
                             <img src="ME.png"
-                                 
+                                 onerror="this.src='https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=1000&auto=format&fit=crop'"
                                  alt="Chloe Danielle Gutierrez"
                                  class="about-image">
                             <div class="about-image-overlay"></div>
@@ -564,7 +565,7 @@
                         </div>
                         <div class="about-tag tag-3">
                             <i class="fas fa-paint-brush"></i>
-                            <span>Ui/Ux Designer</span>
+                            <span>Designer</span>
                         </div>
                     </div>
                 </div>
@@ -627,20 +628,26 @@
                                 <div class="skill-icon"><i class="fab fa-figma"></i></div>
                                 <span>Figma</span>
                             </div>
+                                <div class="skill-item">
+                            <div class="skill-icon"> <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span>Flutter</span>
+                            </div>
                         </div>
                     </div>
+                    
                     <!-- Stats -->
                     <div class="stats-grid mt-8">
                         <div class="stat-item">
-                            <span class="stat-number" data-target="4">0</span>
+                            <span class="stat-number" data-target="7">0</span>
                             <span class="stat-label">Game Projects</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="4">0</span>
-                            <span class="stat-label">Website Developed</span>
+                            <span class="stat-number" data-target="6">0</span>
+                            <span class="stat-label">UI Designs</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-number" data-target="4">0</span>
                             <span class="stat-label">Years Coding</span>
                         </div>
                     </div>
@@ -719,8 +726,85 @@
                                 <h3 class="text-lg font-bold text-white border-b border-gray-700 pb-2 mb-2">OBJECTIVES</h3>
                                 <ul id="modalObjectives" class="list-disc list-inside text-sm text-gray-300 space-y-1"></ul>
                             </div>
+                            <div id="prototypeButtonContainer" class="hidden">
+                                <a id="prototypeLink" href="#" target="_blank" rel="noopener noreferrer" class="prototype-btn">
+                                    <i class="fas fa-external-link-alt mr-2"></i>
+                                    Open Prototype
+                                </a>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 z-50 hidden">
+        <div class="modal-backdrop absolute inset-0 bg-black/90 backdrop-blur-lg" onclick="closeContactModal()"></div>
+        <div class="modal-content relative w-full h-full flex items-center justify-center p-4 pointer-events-none">
+            <div class="modal-box relative bg-gray-900 w-full max-w-md rounded-xl border border-cyan-500 shadow-xl flex flex-col overflow-hidden pointer-events-auto transform scale-95 opacity-0">
+                <!-- Header -->
+                <div class="flex justify-between items-center p-6 border-b border-gray-800">
+                    <h3 class="text-2xl tech-font font-bold text-cyan-400">
+                        <i class="fas fa-paper-plane mr-2"></i>GET IN TOUCH
+                    </h3>
+                    <button onclick="closeContactModal()" class="text-gray-400 hover:text-white text-2xl cursor-pointer transition">&times;</button>
+                </div>
+                
+                <!-- Body -->
+                <div class="p-6 space-y-4">
+                    <p class="text-gray-300 text-center mb-6">Let's connect! Feel free to reach out through any of these platforms.</p>
+                    
+                    <!-- Contact Links -->
+                    <a href="mailto:gutierrezchloe1212@gmail.com" class="contact-link">
+                        <div class="contact-icon gmail">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Email</span>
+                            <span class="contact-value">gutierrezchloe1212@gmail.com</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/in/chloe-danielle-gutierrez" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-icon linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">LinkedIn</span>
+                            <span class="contact-value">Chloe Danielle Gutierrez</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    
+                    <a href="https://github.com/ChloeDanielle" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-icon github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">GitHub</span>
+                            <span class="contact-value">@ChloeDanielle</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                    
+                    <a href="https://www.facebook.com/cholezy.01" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <div class="contact-icon facebook">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <div class="contact-info">
+                            <span class="contact-label">Facebook</span>
+                            <span class="contact-value">Chloe Gutierrez</span>
+                        </div>
+                        <i class="fas fa-arrow-right contact-arrow"></i>
+                    </a>
+                </div>
+                
+                <!-- Footer -->
+                <div class="p-6 border-t border-gray-800 text-center">
+                    <p class="text-xs text-gray-500 tech-font">Looking forward to hearing from you!</p>
                 </div>
             </div>
         </div>
