@@ -161,7 +161,7 @@ const gameData = [
         platform: "PC",
         engine: "Unity 3D",
         role: "Lead Programmer",
-        year: 2024,
+        year: 2025,
         objectives: [
             "Create interactive story sequences",
             "Implement character dialogue system",
@@ -742,3 +742,4 @@ document.addEventListener('keydown', (e) => {
         closeContactModal();
     }
 });
+
